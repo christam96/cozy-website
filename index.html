@@ -21,7 +21,10 @@
                         'body': ['Circular Std', 'Arial', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "url('/assets/bg.png')",
+                        'hero-pattern': "url('/assets/pic1.png')",
+                        'bg-pattern': "url('/assets/bg.png')",
+                        'poster-pattern': "url('/assets/pic2.png')",
+                        'card-pattern': "url('/assets/pic3.png')",
                     }
                 }
             }
@@ -44,7 +47,8 @@
     </header>
 
     <main>
-        <section class="relative bg-hero-pattern bg-cover bg-center text-cozy-red py-20">
+        <!-- <section class="relative bg-bg-pattern bg-cover bg-center text-cozy-red py-20"> -->
+        <section class="relative bg-bg-pattern bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center justify-center">
             <div class="absolute inset-0"></div>
             <div class="container mx-auto px-4 text-center relative z-10">
                 <h2 class="text-5xl font-display font-bold mb-6">Welcome to COZY COWORK CAFE</h2>
@@ -53,7 +57,7 @@
             </div>
         </section>
 
-        <section class="py-16 bg-hero-pattern bg-cover bg-center">
+        <section class="py-16 bg-poster-pattern bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center justify-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-display font-bold mb-8 text-center">Full Access</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -73,7 +77,8 @@
             </div>
         </section>
 
-        <section class="bg-cozy-blue py-16">
+        <!-- <section class="bg-white py-16"> -->
+        <section class="py-16 bg-card-pattern bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center justify-center">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl font-display font-bold mb-8">Why Choose COZY COWORK CAFE?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -103,5 +108,41 @@
             <p>&copy; 2024 COZY COWORK CAFE. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        // Animate header
+        const header = document.querySelector('header');
+        header.animate([
+            { transform: 'translateY(-100%)' },
+            { transform: 'translateY(0)' }
+        ], {
+            duration: 1000,
+            easing: 'ease-out'
+        });
+    
+        // Animate main heading
+        const mainHeading = document.querySelector('h2');
+        mainHeading.animate([
+            { opacity: 0, transform: 'translateY(50px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+        ], {
+            duration: 1500,
+            easing: 'ease-out',
+            delay: 500
+        });
+    
+        // Animate "Book Now" button
+        const bookNowButton = document.querySelector('a.bg-cozy-red');
+        bookNowButton.animate([
+            { opacity: 0, transform: 'scale(0.8)' },
+            { opacity: 1, transform: 'scale(1)' }
+        ], {
+            duration: 1000,
+            easing: 'ease-out',
+            delay: 1000
+        });
+    </script>
+    </body>
+    </html>
 </body>
 </html>
