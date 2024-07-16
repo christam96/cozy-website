@@ -20,6 +20,9 @@
                         'display': ['Degular Display', 'Circular Std', 'Arial', 'sans-serif'],
                         'body': ['Circular Std', 'Arial', 'sans-serif'],
                     },
+                    backgroundImage: {
+                        'hero-pattern': "url('/bg.png')",
+                    }
                 }
             }
         }
@@ -41,8 +44,9 @@
     </header>
 
     <main>
-        <section class="bg-white text-black py-20">
-            <div class="container mx-auto px-4 text-center">
+        <section class="relative bg-hero-pattern bg-cover bg-center text-white py-20">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
                 <h2 class="text-5xl font-display font-bold mb-6">Welcome to COZY COWORK CAFE</h2>
                 <p class="text-xl mb-8">Discover the perfect blend of productivity and comfort.</p>
                 <a href="#" class="bg-cozy-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-600 transition duration-300">Book Now</a>

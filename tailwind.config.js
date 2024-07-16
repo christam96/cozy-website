@@ -18,9 +18,6 @@ module.exports = {
         sans: ['Circular Std', 'Arial', 'sans-serif'],
         display: ['Degular Display', 'Circular Std', 'Arial', 'sans-serif'],
       },
-      backgroundImage: {
-        'hero-pattern': "url('/bg.png')",
-      },
     },
   },
   plugins: [],
