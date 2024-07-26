@@ -20,5 +20,5 @@ To get a local copy up and running, follow these simple steps:
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/yourusername/cozy-cowork-cafe.git
+   git clone https://github.com/christam96/cozy-cowork-cafe.git
 2. `cd` and run `npm build` to start local development
